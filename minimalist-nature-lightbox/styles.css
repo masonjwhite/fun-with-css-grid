@@ -1,0 +1,185 @@
+/* CSS Vars */
+:root {
+    --margin-size-lg: 9rem;
+    --margin-size-sm: .5rem;
+}
+
+/* Perform a basic reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: var(--margin-size-lg);
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2,calc(50vw - var(--margin-size-lg)));
+    grid-template-rows: repeat(2,calc(50vh - var(--margin-size-lg)));
+
+    height: calc(100vh - var(--margin-size-lg) * 2);
+    box-shadow: 0 3rem 8rem rgba(0,0,0, .3);
+}
+
+.main-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('./images/workspace.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.main-card__content {
+    margin-top: 18%;
+    text-align: center;
+}
+
+.main-card__number {
+    color: #555;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 5%;
+}
+
+.main-card__category {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .5rem;
+    margin-bottom: 9%;
+}
+
+.main-card__title {
+    font-family: 'Lora', serif;
+    font-size: 4.5rem;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+
+.main-card__title span {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-card__content {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.sub-card__number {
+    color: #555;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 5%;
+}
+
+.sub-card__category {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .5rem;
+    margin-bottom: 5%;
+}
+
+.sub-card__title {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: .2rem;
+}
+
+.sub-card--1 {
+    background-image: url('./images/desert.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.sub-card--2 {
+    background-image: url('./images/beach.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+/* Media queries */
+
+@media(max-width: 767px) {
+    .body {
+        margin: var(--margin-size-sm);
+    }
+
+    .articles {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, calc(100vh - var(--margin-size-sm) * 2));
+    }
+
+    .main-card {
+        grid-column: auto;
+        grid-row: auto;
+
+        height: 90%;
+        box-shadow: 0 3rem 8rem rgba(0,0,0, .3);
+    }
+    
+    .main-card__content, .sub-card__content {
+        margin-top: 30%;
+    }
+    
+    .main-card__number {
+        margin-bottom: 5%;
+    }
+    
+    .main-card__category {
+        letter-spacing: .5rem;
+        margin-bottom: 5%;
+    }
+    
+    .main-card__title {
+        font-size: 3rem;
+        margin-bottom: 2%;
+    }
+    
+    .main-card__title span {
+        display: inline;
+    }
+
+    .sub-card {
+        height: 90%;
+        box-shadow: 0 3rem 8rem rgba(0,0,0, .3);
+    }
+}
+
+@media(max-width: 575px) {
+    body {
+        margin: 3rem;
+    }
+}

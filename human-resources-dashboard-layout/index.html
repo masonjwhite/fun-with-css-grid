@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Grid Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="navbar">
+        <img class="navbar__logo" src="https://via.placeholder.com/150x50" alt="logo" />
+        <div class="navbar__search">
+            <i class="fas fa-search navbar__search-icon"></i>
+            <input class="navbar__search-input" placeholder="Search" />
+        </div>
+        <nav class="navbar__controls">
+            <ul class="navbar__controls-list">
+                <li><i class="fas fa-bell"></i></li>
+                <li><i class="fas fa-inbox"></i></li>
+                <li><i class="fas fa-user-alt"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome">
+            <h1 class="welcome__greeting">Welcome, Mason White</h1>
+            <ul class="welcome__controls">
+                <li>
+                    <i class="fas fa-info-circle"></i>
+                </li>
+                <li>
+                    <i class="fas fa-cog"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="widgets">
+            <div class="widget widget--inbox">
+                <img class="widget__img" src="https://via.placeholder.com/60x60" alt="">
+                <h2 class="widget__title">Inbox</h2>
+                <p class="widget__info">3 items</p>
+                <ul class="widget__list">
+                    <li>
+                        <h3>Some important message</h3>
+                        <p>Received 3 days ago</p>
+                    </li>
+                    <li>
+                        <h3>Some other important message</h3>
+                        <p>Received 5 days ago</p>
+                    </li>
+                    <li>
+                        <h3>Some random message</h3>
+                        <p>Received 10 days ago</p>
+                    </li>
+                </ul>
+                <div class="widget__footer">
+                    <p>Go to inbox &rarr;</p>
+                </div>
+            </div>
+            <div class="widget widget--announcements">
+                <img class="widget__img" src="https://via.placeholder.com/60x60" alt="">
+                <h2 class="widget__title">Announcements</h2>
+                <p class="widget__info">3 items</p>
+                <ul class="widget__list widget__list--announcements">
+                    <img src="https://via.placeholder.com/150x80" />
+                    <li class="announcement">
+                        <h3 class="announcement__heading">Its time for benefits enrollment!</h3>
+                        <p class="announcement__info">Week of enrollment is 01/01/2018</p>
+                        <p class="announcement__cta">Enroll now &rarr;</p>
+                    </li>
+                    <img src="https://via.placeholder.com/150x80" />
+                    <li class="announcement">
+                        <h3 class="announcement__heading">Its time for benefits enrollment!</h3>
+                        <p class="announcement__info">Week of enrollment is 01/01/2018</p>
+                        <p class="announcement__cta">Enroll now &rarr;</p>
+                    </li>
+                    <img src="https://via.placeholder.com/150x80" />
+                    <li class="announcement">
+                        <h3 class="announcement__heading">Its time for benefits enrollment!</h3>
+                        <p class="announcement__info">Week of enrollment is 01/01/2018</p>
+                        <p class="announcement__cta">Enroll now &rarr;</p>
+                    </li>
+                </ul>
+                <div class=" widget__footer ">
+                    <p>Show more &rarr;</p>
+                </div>
+            </div>
+            <div class="widget widget--payslips ">
+                <img class="widget__img " src="https://via.placeholder.com/60x60 " alt=" ">
+                <h2 class="widget__title ">Payslips</h2>
+                <p class="widget__info ">3 items</p>
+                <ul class="widget__list ">
+                    <li>
+                        <p>January 1st, 2018</p>
+                    </li>
+                    <li>
+                        <p>January 14th, 2018</p>
+                    </li>
+                    <li>
+                        <p>January 28th, 2018</p>
+                    </li>
+                    <li>
+                        <p>February 11th, 2018</p>
+                    </li>
+                </ul>
+                <div class="widget__footer ">
+                    <p>View all &rarr;</p>
+                </div>
+            </div>
+            <div class="widget widget--activity ">
+                <img class="widget__img " src="https://via.placeholder.com/60x60 " alt=" ">
+                <h2 class="widget__title ">Recent Activity</h2>
+                <p class="widget__info ">3 items</p>
+                <ul class="widget__list ">
+                    <li>
+                        <p>Request time off</p>
+                    </li>
+                    <li>
+                        <p>Create expense report</p>
+                    </li>
+                    <li>
+                        <p>View team</p>
+                    </li>
+                    <li>
+                        <p>View current payslip</p>
+                    </li>
+                    <li>
+                        <p>View goals</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="widget widget--apps">
+                <img class="widget__img" src="https://via.placeholder.com/60x60 " alt=" ">
+                <h2 class="widget__title ">Applications</h2>
+                <p class="widget__info ">3 items</p>
+                <ul class="widget__list widget__list--apps">
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Pay</p>
+                    </li>
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Learning</p>
+                    </li>
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Dashboards</p>
+                    </li>
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Absence</p>
+                    </li>
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Expenses</p>
+                    </li>
+                    <li>
+                        <img class=" " src="https://via.placeholder.com/100x100 " alt=" ">
+                        <p>Birthdays</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

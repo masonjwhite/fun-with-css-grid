@@ -1,0 +1,290 @@
+/* CSS Vars */
+:root {
+    --margin-size-lg: 9rem;
+    --margin-size-sm: .5rem;
+
+    --color-white: #ffffff;
+    --color-grey: #e7e7e7;
+    --color-black: #1e1e1e;
+}
+
+/* Perform a basic reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-grey);
+    color: var(--color-black);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: .5rem 2%;
+
+    background-color: var(--color-white);
+}
+
+.navbar__logo {
+    display: block;
+    height: 100%;
+}
+
+.navbar__search {
+    width: 30%;
+    flex-shrink: 3;
+}
+
+.navbar__search-icon {
+    font-size: 1.5rem;
+}
+
+.navbar__search-input {
+    height: 3rem;
+    width: 90%;
+    border: none;
+    margin-left: 2%;
+    padding-left: 2%;
+    background-color: var(--color-white);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .3);
+}
+
+.navbar__controls-list {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar__controls-list li {
+    display: inline-block;
+}
+
+.navbar__controls-list :not(:first-child) {
+    margin-left: 2.5rem;
+}
+
+main {
+    margin: 2.5% 15%;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    
+    padding: 1.5%;
+    margin-bottom: 2.5%;
+
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .3);
+}
+
+.welcome__controls {
+    list-style: none;
+    margin-left: auto;
+    font-size: 2rem;
+    color: #ced3d9;
+    
+}
+
+.welcome__controls li {
+    display: inline-block;
+}
+
+.welcome__controls :not(:first-child) {
+    margin-left: 1.5rem;
+}
+
+.widgets {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: repeat(6, 150px);
+    grid-gap: 2.5rem;
+}
+
+.widget {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 30px 30px;
+    align-items: center;
+    grid-column-gap: 1rem;
+
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .3);
+    background-color: #f7f7f7;
+    padding: 3rem;
+
+}
+
+.widget__img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    
+    font-size: 4rem;
+}
+
+.widget__title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--primary-color);
+}
+
+.widget__info {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.widget__list {
+    grid-column: 1 / -1;
+    align-self: start;
+
+    list-style: none;
+    font-size: 1.25rem;
+}
+
+.widget__list li {
+    margin: 5% 0;
+}
+
+.widget__footer {
+    grid-column: 1 / -1;
+}
+
+.widget--inbox {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.widget--payslips {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+}
+
+.widget--activity {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+}
+
+.widget--announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+.widget__list--announcements {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 1rem;
+
+    margin: 5% 0;
+}
+
+.widget__list--announcements img {
+    max-width: 100%;
+}
+
+.announcement__info, .announcement__cta {
+    margin: 2% 0;
+}
+
+.widget--apps {
+    grid-column: 2 / 3;
+    grid-row: 4 / 7;
+}
+
+.widget__list--apps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+
+    margin: 10% 0 10% 0;
+}
+
+.widget__list--apps li p{
+    margin-top: 5%;
+}
+
+.widget__list--apps li img {
+    max-width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .widget__list--announcements {
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        grid-gap: 1rem;
+    
+        margin: 5% 0;
+    }
+}
+
+@media (max-width: 924px) {
+    main {
+        margin: 2.5% 5%;
+    }
+
+    .navbar__search-input {
+        width: 80%;
+    }
+}
+
+@media(max-width: 686px) {
+    .navbar__search-input {
+        width: 80%;
+    }
+
+    .navbar__controls-list li {
+        font-size: .5rem;
+    }
+    
+    .navbar__controls-list :not(:first-child) {
+        margin-left: 1rem;
+    }
+
+    .widgets {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2.5rem;
+    }
+
+    .widget--inbox {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+    
+    .widget--payslips {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+    
+    .widget--activity {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+    
+    .widget--announcements {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+
+    .widget--apps {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+}
